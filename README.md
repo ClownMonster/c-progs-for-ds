@@ -6,7 +6,12 @@ use your own object files,so that execution will be understandable
 
 
 *****default object execution ****
+
 s.exe -> singleLL.c
+
 d.exe -> doubleLL.c
+
 c.exe -> Single Circular LL ->circularLL.c
+
 dc.exe -> Double_circular.c
+

@@ -1,11 +1,15 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
-#define SIZE 5
-int stack[SIZE],Enter = 0,top = -1,del = -1 ;
-int pop();
+#define SIZE 10
+
+int stack[SIZE],Enter = 0,top = -1,del = -1 ; // global stack , top , delete and Enter variables
+
+// function declerations
+int pop(); 
 void push();
 void display();
+
 int main()
 {
   printf("******stack Menu******\n");
@@ -33,9 +37,7 @@ int main()
               main();
               break;
       case 4: printf("\n******Terminating the program *******\n");
-              exit(0);
-              
-              
+              exit(0);            
       default: printf("\nInvalid choice\n");
                main();
                break;
@@ -52,21 +54,20 @@ void push()
   else
   {
     printf("enter the number to be pushed into the stack\n");
-    scanf("%d",&stack[++top]);
+    scanf("%d",&stack[++top]);  // pre-increement to the top value and adding the element to the stack
     return;
   }
 }
 
 int pop()
 {
-  if(top == -1)
+  if(top == -1) 
   {
     printf("Stack underflow\n");
     return 0;
   }
   else{
-    del = stack[top];
-    --top;
+    del = stack[top--]; // deleting the top element and post decrement of top  variable
     return del;
   }
 }

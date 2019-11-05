@@ -6,7 +6,7 @@ typedef struct student
 {
 	int rollno; char name[20];
 	struct student *next;
-}student;
+}student; //student variable for the structure
 
 int srollno = 0, scount = 0; char sname[20]; student *head = NULL , *sptr = NULL;
 

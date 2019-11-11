@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 
+
 typedef struct student
 {
 	int rollno; char name[20];
@@ -77,7 +78,7 @@ student *Insert()
 	int position;
 	int rollposition;
 	
-	if(head == NULL)
+	if(head == NULL) // checking head condition
 	{
 		printf("\nYou are the first student to enroll\n");
 		student *newstudent = create_new_node(head);

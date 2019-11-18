@@ -13,11 +13,11 @@ void display();
 int main()
 {
   printf("******stack Menu******\n");
-  printf("Enter your Choice\n");
   printf("1.Push\n2.Pop\n3.Display\n4.exit\n\n");
-  scanf("\n%d",&Enter);
+  
   while(1)
-    {
+    {  printf("Enter your Choice\n : ");
+        scanf("\n%d",&Enter);
       switch (Enter)
       {
       case 1:   push();

@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include<stdlib.h>
 #define size 5
+
+// global variables
 int Q[size] , rear = -1 , front = -1;
 
 
 void enQ()
 {
-    if((front == 0 && rear == size-1) || front == rear+1)
+    if((front == 0 && rear == size-1) || front == rear+1) 
     {
         printf("\nQue  is full\n");
         return;
@@ -15,7 +17,7 @@ void enQ()
     {   int ele;
         printf("\nEnter the value : ");
         scanf("%d",&ele);
-        if(rear == size-1 && front !=0)
+        if(rear == size-1 && front !=0)  // que full and the deq and then trying to enq
             rear = -1;
         if(front == -1)
             front = 0;
@@ -26,7 +28,7 @@ void enQ()
 
 void deQ()
 {
-    if(front == -1 && rear == -1)
+    if(front == -1 && rear == -1) // base condition
     {
         printf("\nQue is empty\n");
         return;

@@ -51,12 +51,19 @@ void display()
         return;
     }
 
-    else
-    {   printf("\n"); int i;
+   if(front<=rear) // for noraml conditions
+   {
+      printf("\n"); int i;
         for(i=front;i<=rear;i++)
             printf("%d\t",Q[i]);
-
-    }
+   }
+   else
+   {
+    printf("\n"); int i;
+        for(i=front;i< size;i++) // for parallel enq and deq
+            printf("%d\t",Q[i]);
+   }
+    
 }
 
 int main()

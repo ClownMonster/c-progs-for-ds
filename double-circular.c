@@ -5,12 +5,12 @@
 typedef struct student
 {
 	int rollno; char name[20];
-	struct student *next, *prev;
+	struct student *next, *prev; // next and prev structure pointers gives the address of next and prvious nodes respectively
 
 }student;
 
 student *head = NULL, *tail = NULL, *sptr = NULL;
-int srollno = 0, scount = 0;
+int srollno = 0, scount = 0; // scount to count number of nodes in ll
 char sname[20];
 
 void Demo_options()
@@ -26,7 +26,7 @@ student *Search(student *sptr, int srollno)
 		printf("\nList is Empty\n");
 		return NULL;
 	}
-	else
+	else // search algorithm you can prefer other types of search too
 	{
 		do
 		{
@@ -89,7 +89,7 @@ student *Insert(student *head)
 		return head;
 	}
 
-	else  if(head != NULL)
+	else  if(head != NULL) // base condition
 	{
 		printf("\nDo you want to insert After or Before :\nEnter 1 to insert After and 0 to insert Before\n\t>> : ");
 		scanf("%d",&position);
@@ -99,7 +99,7 @@ student *Insert(student *head)
 			scanf("%d",&rollposition);
 		}
 
-		else if(position == 0)
+		else if(position == 0) // make new node as first
 		{
 			printf("\nEnter the Roll number of the student you wish to insert Before : "); 
 			scanf("%d",&rollposition);

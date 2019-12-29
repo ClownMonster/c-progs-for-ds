@@ -1,23 +1,3 @@
-/*
- @Author: Dr.Mydhili K Nair, Professor, ISE Dept, RIT, Bangalore
- Purpose: This program does the following:
- a) Creates Binary Tree through 'Double Recursion' call to 'createTree' function
- b) Checks if the created Binary Tree is a Strictly Binary Tree or not
- c) Displays the tree through 'Double Recursion' call to 'displayTree' function
- 
- Test Cases: This program checks the following unit test cases:
- NOTE: First three test cases are ONLY limited to root node
- 1) Display error message of the root node is NULL
- 2) Determines it is strictly binary tree by checking if both the left & right pointers of the root node is NULL
- 3) Determines it is NOT strictly binary tree by checking if root->left is NOT NULL while root->right is or vice-versa
- 4) Checks the condiction for a tree to be not strictly binary tree.
-    Logic:
- --- First Pass the pointer root->left which is the left sub-tree
- --- Check each internal node / leaf node for Test Case #2 & Test Case #3
- --- If the left sub-tree returns '0' it means Test Case #2 or #3 failed=, meaning the left sub-tree is not strict binary tree.
- --- As long as the left sub-tree keeps returning '1' check the right sub-tree of that node
- --- If the right sub-tree also returns '1' recursively, it strict binary tree test is passed
- */
 #include <stdio.h>
 #include<stdlib.h>
 typedef struct myBintree
@@ -36,7 +16,7 @@ myBintree * createBinTree()
     int m; myBintree *ptr;
     
     printf("\n Press -1 if you dont want to enter marks ");
-    scanf("%d", &m); //Remove '&' To DEMO Segmentation Fault
+    scanf("%d", &m); 
     
     if(m == -1) return NULL;
     else
@@ -94,11 +74,7 @@ void displayBinTree(myBintree * root,int i)
     if(root !=NULL)
     {
         displayBinTree(root->left,i+1);
-        for(j=1;j<=i;j++) printf("\t"); //DEMO : Only prints tab
-        //Donot enclose the two printf in brackets as the actual print happens
-        //outside the for loop when loop condition fails
-        //printf("%d(%d:%d)\n",root->marks,i,j);
-        
+        for(j=1;j<=i;j++) printf("\t"); 
         printf("%d \n",root->marks);
         displayBinTree(root->right,i+1);
     }

@@ -46,7 +46,7 @@ void createPolynomial()
                 }
                 if(ptr == NULL)    //When current last node is reached
                 {
-                    prev->next = newnode;///current lastnode's next value is assigned to newnode address
+                    prev->next = newnode;
                     newnode->next = ptr; //newnode becomes last node
                 }
                 else //For newnode has intermediate power values

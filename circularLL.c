@@ -3,7 +3,7 @@
 #include<string.h>
 
 
-typedef struct student
+typedef struct student //strucutre with two data
 {
 	int rollno; char name[20];
 	struct student *next;
@@ -22,7 +22,7 @@ void demo_options()
 void print_details(student *sptr)
 {
 
-	if(head == NULL )
+	if(head == NULL ) // base condition
 	{
 		printf("Empty List\n");
 		return;
@@ -42,7 +42,7 @@ void print_details(student *sptr)
 	}
 }
 
-student *create_new_node(student *next)
+student *create_new_node(student *next) // called each time when needed a new memory allocation
 {
 	student *newstudent = (student *)malloc(sizeof(student));
 	strcpy(newstudent->name,sname);

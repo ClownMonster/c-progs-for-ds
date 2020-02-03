@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include<stdlib.h>
+
 typedef struct myBintree
 {
     int marks;
@@ -85,7 +86,6 @@ int main()
 {
     root = createBinTree();
     printf("\n Displaying....\n");
-    
     if(root == NULL)
     {
         printf("\nTest Case #1 \n");

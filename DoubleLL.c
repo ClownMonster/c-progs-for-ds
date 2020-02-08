@@ -4,7 +4,8 @@
 
 typedef struct student
 {
-	int rollno; char name[20];
+	int rollno; 
+	char name[20];
 	struct student *next, *prev;
 
 }student;

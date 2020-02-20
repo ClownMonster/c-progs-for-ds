@@ -4,8 +4,8 @@
 
 typedef struct student
 {
-	int rollno; char name[20];
-	struct student *next, *prev; // next and prev structure pointers gives the address of next and prvious nodes respectively
+int rollno; char name[20];
+struct student *next, *prev; // next and prev structure pointers gives the address of next and prvious nodes respectively
 
 }student;
 

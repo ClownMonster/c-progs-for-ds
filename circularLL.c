@@ -1,8 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-
-
 typedef struct student //strucutre with two data
 {
 	int rollno; char name[20];

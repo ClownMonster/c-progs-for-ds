@@ -32,10 +32,10 @@ btree* create_tree()
 }
 
 
-void display(btree* root,  int i)
+void display(btree* root,int i)
 {
     int j;
-    if(root !=NULL)
+    if(root != NULL)
     {
         display(root->left,i+1);
         for(j=1;j<=i;j++) printf("\t"); 

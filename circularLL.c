@@ -17,7 +17,7 @@ void demo_options()
 	printf("1.Demo Options\n2.Search\n3.Insert\n4.Delete\n5.Print Details\n6.Quit");
 }
 
-void print_details(student *sptr)
+void print_details(student* sptr)
 {
 
 	if(head == NULL ) // base condition

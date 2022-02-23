@@ -15,6 +15,6 @@
  dc.exe -> Double_circular.c
 
  for stack execution you can create the object as
- gcc/cc  -o <<object name>> stack.c
+ gcc/cc  -o <<object name>> stack.c  {{ you can have other compilers too}}
 
 

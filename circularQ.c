@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include<stdlib.h>
 #define size 5
+
 int Q[size] , rear = -1 , front = -1;
 
 
 void enQ()
 {
-    if((front == 0 && rear == size-1) || front == rear+1)
+
     {
         printf("\nQue  is full\n");
         return;
@@ -15,7 +16,7 @@ void enQ()
     {   int ele;
         printf("\nEnter the value : ");
         scanf("%d",&ele);
-        if(rear == size-1 && front !=0)
+
             rear = -1;
         if(front == -1)
             front = 0;
@@ -26,7 +27,7 @@ void enQ()
 
 void deQ()
 {
-    if(front == -1 && rear == -1)
+
     {
         printf("\nQue is empty\n");
         return;
@@ -47,14 +48,7 @@ void display()
     {
         printf("\nQue is Empty");
         return;
-    }
 
-    else
-    {   printf("\n"); int i;
-        for(i=front;i<=rear;i++)
-            printf("%d\t",Q[i]);
-
-    }
 }
 
 int main()
@@ -77,4 +71,4 @@ int main()
             default: printf("\nPlease select the correct choice!!!\n");
         }
     }
-}
+
